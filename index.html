@@ -6,28 +6,49 @@
     <title>TechSummit 2025 - Shaping Tomorrow with Innovation Today</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css">  -->
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.svg" alt="TechSummit 2025 Logo">
+                <img src="logos/interiit_logo.png" alt="TechSummit 2025">
+                <div class="right-logos">
+                    <img src="logos/bost_logo.png" alt="BOST">
+                    <img src="logos/gdg_logo.png" alt="gdg_logo">     
+                </div>
             </div>
-            <ul>
+            <!-- <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#domains">Domains</a></li>
                 <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#schedule">Schedule</a></li>
-            </ul>
+            </ul> -->
         </nav>
     </header>
 
     <main>
         <section id="hero">
-            <h1>TechSummit 2025</h1>
-            <p>Shaping Tomorrow with Innovation Today</p>
-            <button class="cta-button">Register Now</button>
-            <div class="hero-background"></div>
+            <div id="main-container" style="opacity: 1; " >
+                <div id="start-screen">
+                  <div id="cta-container">
+                    <div id="start-button-container">           
+                      <button id="start-button" style="display: none;">Here</button>
+                    </div>
+                  </div>
+                </div>
+                <div id="hud">
+                  <div id="mute-button" class="hud-button" style="display:none;"></div>
+                  <div id="vr-button" class="hud-button" style="display:none;"></div>
+                </div>
+                <div id="hud-tooltip" style="display:none;">Lorem Ipsum</div>  
+                <!-- <div style="background-color: rgba(0, 0, 0, 0.5); position:relative; z-index:2; display:block; border-radius:5%; width: 120%; height:120%;">  -->
+                <div>
+                <h1>TechSummit 2025</h1>
+                <p>Shaping Tomorrow with Innovation Today</p>
+                </div>
+                <div class="hero-background"><canvas id="backgroundCanvas"></canvas></div>    
+              </div>
         </section>
 
         <section id="domains">
@@ -49,31 +70,9 @@
                     <h3>Advanced Coding</h3>
                     <div class="domain-visual"></div>
                 </div>
-            </div>
-        </section>
-
-        <section id="speakers">
-            <h2>Featured Speakers</h2>
-            <div class="speaker-grid">
-                <div class="speaker-card">
-                    <img src="speaker1.jpg" alt="Dr. Jane Smith">
-                    <h3>Dr. Jane Smith</h3>
-                    <p>AI Research Lead, TechCorp</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="speaker2.jpg" alt="Prof. John Doe">
-                    <h3>Prof. John Doe</h3>
-                    <p>Robotics Pioneer, RoboTech Institute</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="speaker3.jpg" alt="Dr. Emily Chen">
-                    <h3>Dr. Emily Chen</h3>
-                    <p>Quantum Computing Expert, QuantumLab</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="speaker4.jpg" alt="Mr. Alex Johnson">
-                    <h3>Mr. Alex Johnson</h3>
-                    <p>Senior Software Architect, CodeMasters Inc.</p>
+                <div class="domain-card" data-domain="gamedev">
+                    <h3>GameDev</h3>
+                    <div class="domain-visual"></div>
                 </div>
             </div>
         </section>
@@ -82,35 +81,70 @@
             <h2>Event Schedule</h2>
             <div class="schedule-timeline">
                 <div class="timeline-item" data-domain="ai">
-                    <span class="time">09:00 AM</span>
-                    <h3>Opening Keynote: The Future of AI</h3>
-                    <p>Dr. Jane Smith | Main Hall</p>
+                    <span class="time">9th Jan</span>
+                    <h3>Dream 11: Next-Gen Team Builder with Predictive AI</h3>
+                    <p>9:00PM - 11:00PM | Main Hall</p>
                 </div>
                 <div class="timeline-item" data-domain="robotics">
-                    <span class="time">11:00 AM</span>
-                    <h3>Robotics in Healthcare</h3>
-                    <p>Prof. John Doe | Room A</p>
+                    <span class="time">11th Jan</span>
+                    <h3>Zelta: Curating Alphas on BTC & USDT Crypto Market</h3>
+                    <p>9:00PM - 11:00PM | Room A</p>
                 </div>
                 <div class="timeline-item" data-domain="quant">
-                    <span class="time">02:00 PM</span>
-                    <h3>Quantum Computing: A New Era</h3>
-                    <p>Dr. Emily Chen | Room B</p>
+                    <span class="time">13th Jan</span>
+                    <h3>IdeaForge: Position & Altitude Control of Quadrotor with Single Motor Failure</h3>
+                    <p>9:00PM - 11:00PM | Room B</p>
                 </div>
                 <div class="timeline-item" data-domain="coding">
-                    <span class="time">04:00 PM</span>
-                    <h3>Advanced Coding Techniques Workshop</h3>
-                    <p>Mr. Alex Johnson | Coding Lab</p>
+                    <span class="time">15th Jan</span>
+                    <h3>ISRO: High Resolution Elemental Mapping of Lunar Surface</h3>
+                    <p>9:00PM - 11:00PM | Coding Lab</p>
                 </div>
+                <center>And more..</center>
+            </div>
+        </section>
+
+        <section id="speakers">
+            <h2>Featured Companies</h2>
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <img src="logos/pathway_logo.jpeg" alt="Dr. Jane Smith">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/isro_logo.jpeg" alt="Prof. John Doe">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/ideaforge_logo.jpeg" alt="Dr. Emily Chen">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/zelta_logo.jpeg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/Dream11_logo.jpeg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/adobe_logo.jpg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/bharatforge_logo.jpeg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/Fedex_logo.jpeg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/product_logo.jpeg" alt="">
+                </div>
+                <div class="speaker-card">
+                    <img src="logos/game_logo.jpeg" alt="">
+                </div>    
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p>Email: info@techsummit2025.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p>Email: gs.tech@iitrpr.ac.in</p>
             </div>
             <div class="social-links">
                 <a href="#" class="social-icon" aria-label="Facebook">
@@ -128,7 +162,78 @@
             <p>&copy; 2025 TechSummit. All rights reserved.</p>
         </div>
     </footer>
+    
+    <audio id="audio" src="audio/implant-128kbps.mp3" loop></audio>
+    <button id="muteButton" class="mute-btn" onclick="toggleMute()">🔊</button>
+    <script>
+   // Get the audio element
+const audio = document.getElementById('audio');
 
+// Flag to track if the audio has started
+let audioStarted = false;
+
+// Function to start the audio
+function startAudio() {
+  if (!audioStarted) {
+    audio.play()
+      .then(() => {
+        console.log('Audio started successfully!');
+        audioStarted = true; // Set the flag to true
+      })
+      .catch((error) => {
+        console.error('Error playing audio:', error);
+      });
+  }
+}
+
+// Add event listeners for different types of interactions
+
+// For touch devices (smartphones)
+document.addEventListener('touchstart', startAudio, { once: true });
+
+// For non-touch devices (laptops/desktops)
+document.addEventListener('mouseover', startAudio, { once: true });
+document.addEventListener('click', startAudio, { once: true });
+
+// Optional: Add keyboard interaction for accessibility
+document.addEventListener('keydown', startAudio, { once: true });
+
+// Function to handle page visibility change
+function handleVisibilityChange() {
+  if (document.hidden) {
+    audio.pause(); // Pause audio when the page is hidden
+    console.log("Audio paused due to page visibility change.");
+  } else {
+    if (audioStarted && audio.paused) {
+      audio.play(); // Resume audio when the page becomes visible
+      console.log("Audio resumed due to page visibility change.");
+    }
+  }
+}
+
+// Set up event listener for visibility change
+if (document.addEventListener) {
+  document.addEventListener('visibilitychange', handleVisibilityChange, false);
+}
+
+console.log("Event listeners set up for audio and page visibility.");
+
+function toggleMute() {
+    const audioPlayer = document.getElementById('audio');
+    const muteButton = document.getElementById('muteButton');
+
+    if (audioPlayer.muted) {
+        // Unmute the audio and update the button icon
+        audioPlayer.muted = false;
+        muteButton.textContent = '🔊'; // Unmute icon
+    } else {
+        // Mute the audio and update the button icon
+        audioPlayer.muted = true;
+        muteButton.textContent = '🔇'; // Mute icon
+    }
+}
+    </script>
+    <script src="js/sample.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
