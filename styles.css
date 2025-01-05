@@ -334,7 +334,8 @@ h2 {
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default;
+    pointer-events: none; 
 }
 
 .domain-card:hover {
