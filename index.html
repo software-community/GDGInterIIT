@@ -25,7 +25,14 @@
             </ul> -->
         </nav>
     </header>
-
+    <div id="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+          </div>
+    </div>
     <main>
         <section id="hero">
             <div id="main-container" style="opacity: 1; " >
@@ -164,6 +171,43 @@
             <p>&copy; 2025 TechSummit. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Function to hide preloader when #start-screen gets the 'hidden' class
+        function observeStartScreen() {
+          const preloader = document.getElementById('preloader');
+          const startScreen = document.getElementById('start-screen');
+    
+          // Create a MutationObserver to monitor attribute changes
+          const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+              if (
+                mutation.type === 'attributes' &&
+                mutation.attributeName === 'class' &&
+                startScreen.classList.contains('hidden')
+              ) {
+                // If 'hidden' class is added to #start-screen, hide the preloader
+                preloader.classList.add('hidden');
+    
+                // Optional: Remove the preloader from the DOM after animation
+                setTimeout(() => preloader.remove(), 500);
+    
+                // Stop observing once the desired condition is met
+                observer.disconnect();
+              }
+            });
+          });
+    
+          // Observe changes to the 'class' attribute of #start-screen
+          observer.observe(startScreen, { attributes: true });
+        }
+    
+        // Start observing
+        observeStartScreen();
+    
+        // Simulate Three.js animation adding the 'hidden' class to #start-screen
+       
+      </script>
     
     <!-- <audio id="audio" src="audio/implant-128kbps.mp3" loop></audio>
     <button id="muteButton" class="mute-btn" onclick="toggleMute()">🔊</button> -->
