@@ -15,7 +15,6 @@
     <title>Tech Rewind - Inter IIT</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css">  -->
 </head>
 
 <body>
@@ -27,12 +26,6 @@
                     <img src="logos/gdg_logo.png" alt="gdg_logo">     
                 </div>
             </div>
-            <!-- <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#domains">Domains</a></li>
-                <li><a href="#speakers">Speakers</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-            </ul> -->
         </nav>
     </header>
     <div id="preloader">
@@ -107,11 +100,7 @@
                     <h3>BharatForge: Centralized Intelligence for Dynamic Swarm Navigation</h3>
                     <!-- <p>9:00PM - 11:00PM | Room B</p> -->
                 </div>
-                <!-- <div class="timeline-item" data-domain="quant">
-                    <span class="time">13th Jan</span>
-                    <h3>IdeaForge: Position & Altitude Control of Quadrotor with Single Motor Failure</h3>
-                    <p>9:00PM - 11:00PM | Room B</p>
-                </div> -->
+                
                 <!-- <div class="timeline-item" data-domain="quant">
                     <span class="time">14th Jan</span>
                     <h3>Zelta: Curating Alphas on BTC & USDT Crypto Market</h3>
@@ -127,7 +116,37 @@
                     <h3>ISRO: High Resolution Elemental Mapping of Lunar Surface</h3>
                     <!-- <p>9:00PM - 11:00PM | Coding Lab</p> -->
                 </div>
-                <center>And more..</center>
+                <div class="timeline-item" data-domain="robotics">
+                    <span class="time">16th Jan</span>
+                    <h3>IdeaForge: Position & Altitude Control of Quadrotor with Single Motor Failure</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+                <div class="timeline-item" data-domain="ai">
+                    <span class="time">18th Jan</span>
+                    <h3>Pathway: Dynamic Agentic RAG with Pathway</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+                <div class="timeline-item" data-domain="coding">
+                    <span class="time">19th Jan</span>
+                    <h3>Adobe: Image Classification and Artificat Identification</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+                <div class="timeline-item" data-domain="quant">
+                    <span class="time">22th Jan</span>
+                    <h3>Zelta: Curating Alphas on BTC & USDT Crypto Market</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+                <div class="timeline-item" data-domain="robotics">
+                    <span class="time">25th Jan</span>
+                    <h3>IGDC: Game Design & Development</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+                <div class="timeline-item" data-domain="ai">
+                    <span class="time">28th Jan</span>
+                    <h3>INA Solar Panel Recyling Challenges: Prediction and Solutions</h3>
+                    <!-- <p>9:00PM - 11:00PM | Room B</p> -->
+                </div>
+            
             </div>
         </section>
 
@@ -135,13 +154,13 @@
             <h2>Featured Companies</h2>
             <div class="speaker-grid">
                 <div class="speaker-card">
-                    <img src="logos/pathway_logo.jpeg" alt="Dr. Jane Smith">
+                    <img src="logos/pathway_logo.jpeg" alt="">
                 </div>
                 <div class="speaker-card">
-                    <img src="logos/isro_logo.jpeg" alt="Prof. John Doe">
+                    <img src="logos/isro_logo.jpeg" alt="">
                 </div>
                 <div class="speaker-card">
-                    <img src="logos/ideaforge_logo.jpeg" alt="Dr. Emily Chen">
+                    <img src="logos/ideaforge_logo.jpeg" alt="">
                 </div>
                 <div class="speaker-card">
                     <img src="logos/zelta_logo.jpeg" alt="">
@@ -196,12 +215,9 @@
     </footer>
 
     <script>
-        // Function to hide preloader when #start-screen gets the 'hidden' class
         function observeStartScreen() {
           const preloader = document.getElementById('preloader');
           const startScreen = document.getElementById('start-screen');
-    
-          // Create a MutationObserver to monitor attribute changes
           const observer = new MutationObserver((mutationsList) => {
             mutationsList.forEach((mutation) => {
               if (
@@ -209,99 +225,17 @@
                 mutation.attributeName === 'class' &&
                 startScreen.classList.contains('hidden')
               ) {
-                // If 'hidden' class is added to #start-screen, hide the preloader
                 preloader.classList.add('hidden');
-    
-                // Optional: Remove the preloader from the DOM after animation
                 setTimeout(() => preloader.remove(), 500);
-    
-                // Stop observing once the desired condition is met
                 observer.disconnect();
               }
             });
           });
-    
-          // Observe changes to the 'class' attribute of #start-screen
           observer.observe(startScreen, { attributes: true });
         }
-    
-        // Start observing
         observeStartScreen();
-    
-        // Simulate Three.js animation adding the 'hidden' class to #start-screen
-       
       </script>
     
-    <!-- <audio id="audio" src="audio/implant-128kbps.mp3" loop></audio>
-    <button id="muteButton" class="mute-btn" onclick="toggleMute()">🔊</button> -->
-    <!-- <script>
-   // Get the audio element
-const audio = document.getElementById('audio');
-
-// Flag to track if the audio has started
-let audioStarted = false;
-
-// Function to start the audio
-function startAudio() {
-  if (!audioStarted) {
-    audio.play()
-      .then(() => {
-        console.log('Audio started successfully!');
-        audioStarted = true; // Set the flag to true
-      })
-      .catch((error) => {
-        console.error('Error playing audio:', error);
-      });
-  }
-}
-
-// Add event listeners for different types of interactions
-
-// For touch devices (smartphones)
-document.addEventListener('touchstart', startAudio, { once: true });
-
-// For non-touch devices (laptops/desktops)
-document.addEventListener('mouseover', startAudio, { once: true });
-document.addEventListener('click', startAudio, { once: true });
-
-// Optional: Add keyboard interaction for accessibility
-document.addEventListener('keydown', startAudio, { once: true });
-
-// Function to handle page visibility change
-function handleVisibilityChange() {
-  if (document.hidden) {
-    audio.pause(); // Pause audio when the page is hidden
-    console.log("Audio paused due to page visibility change.");
-  } else {
-    if (audioStarted && audio.paused) {
-      audio.play(); // Resume audio when the page becomes visible
-      console.log("Audio resumed due to page visibility change.");
-    }
-  }
-}
-
-// Set up event listener for visibility change
-if (document.addEventListener) {
-  document.addEventListener('visibilitychange', handleVisibilityChange, false);
-}
-
-console.log("Event listeners set up for audio and page visibility.");
-
-function toggleMute() {
-    const audioPlayer = document.getElementById('audio');
-    const muteButton = document.getElementById('muteButton');
-
-    if (audioPlayer.muted) {
-        // Unmute the audio and update the button icon
-        audioPlayer.muted = false;
-        muteButton.textContent = '🔊'; // Unmute icon
-    } else {
-        // Mute the audio and update the button icon
-        audioPlayer.muted = true;
-        muteButton.textContent = '🔇'; // Mute icon
-    }
-}
-    </script> -->
     <script src="js/sample.js"></script>
     <script src="script.js"></script>
 </body>
